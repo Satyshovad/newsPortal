@@ -1,0 +1,43 @@
+.page-footer{
+  background-color: #363636;
+}
+
+.page-footer{
+  margin: -8px -8px;
+}
+.contactsinf{
+  /*background: #F8FCFE;*/
+}
+
+.contacts{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+  padding: 40px 0;
+}
+
+.contacts-item{
+  width: 25%;
+}
+
+.contacts-item >h4{
+  font-weight: bold;
+  font-size: 20px;
+  color: #D3D3D3;
+}
+
+.contacts-item >p{
+  max-width: 150px;
+  font-size: 15px;
+  color: #363636;
+  color: #D3D3D3;
+}
+
+.footer-copyright{
+  margin-left: 150px;
+  padding-bottom: 40px;
+}
+
+.footer-copyright >a{
+  color: #D3D3D3;
+}

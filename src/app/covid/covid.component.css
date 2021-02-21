@@ -1,0 +1,15 @@
+.covid{
+  background-color: #D3D3D3;
+  margin: -8px -8px;
+  height: 70px;
+}
+
+.nav_covid{
+  padding-top: 25px;
+}
+.nav_covid > a {
+  color: #000;
+  margin-left: 50px;
+}
+
+
