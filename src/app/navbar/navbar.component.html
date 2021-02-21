@@ -10,8 +10,8 @@
     <a href="#"><b>COVID-19</b></a>
     <a href="#"><b>Contacts</b></a>
     <form action="#">
-        <input type="search" placeholder="Search.." name="search" >
-        <button type="submit">Find</button>
+        <input type="search" placeholder="Search.." name="item" [(ngModel)]="item">
+        <button type="submit" (click)="findItem(item)">Find</button>
     </form>
     </div>
 </header>
