@@ -4,18 +4,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CovidComponent } from './covid/covid.component';
+import { CovidNavbarComponent } from './covid-navbar/covid-navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
+import { LatestnewsComponent } from './latestnews/latestnews.component';
+import { StoryComponent } from './story/story.component';
+import { InterviewsComponent } from './interviews/interviews.component';
+import { CovidComponent } from './covid/covid.component';
+import { ErrorComponent } from './error/error.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CovidComponent,
+    CovidNavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    LatestnewsComponent,
+    StoryComponent,
+    InterviewsComponent,
+    CovidComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

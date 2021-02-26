@@ -4,14 +4,17 @@
   </div>
 
   <div class="nav">
-    <a href="./home.component.html"><b>Home</b></a>
-    <a href="#"><b>Stories</b></a>
-    <a href="#"><b>Interviews</b></a>
-    <a href="#"><b>COVID-19</b></a>
-    <a href="#"><b>Contacts</b></a>
+    <a routerLink="/home"><b>Home</b></a>
+    <a routerLink="/story"><b>Stories</b></a>
+    <a routerLink="/interviews"><b>Interviews</b></a>
+    <a routerLink="/covid"><b>Covid-19</b></a>
+    <a routerLink="#"><b>Contacts</b></a>
     <form action="#">
-        <input type="search" placeholder="Search.." name="item" [(ngModel)]="item">
-        <button type="submit" (click)="findItem(item)">Find</button>
+      <label>
+        <input type="search" placeholder="Search.." name="item" [(ngModel)]="item" style="width: 145px">
+      </label>
+      <button type="submit" (click)="findItem(item)">Find</button>
     </form>
     </div>
 </header>
+
