@@ -5,12 +5,14 @@ import {StoryComponent} from './story/story.component';
 import {InterviewsComponent} from './interviews/interviews.component';
 import {CovidComponent} from './covid/covid.component';
 import {ErrorComponent} from './error/error.component';
+import {ContactsComponent} from './contacts/contacts.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'story', component: StoryComponent},
   {path: 'interviews', component: InterviewsComponent},
   {path: 'covid', component: CovidComponent},
+  {path: 'contacts', component: ContactsComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: ErrorComponent}
 ];

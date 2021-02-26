@@ -13,6 +13,7 @@ import { StoryComponent } from './story/story.component';
 import { InterviewsComponent } from './interviews/interviews.component';
 import { CovidComponent } from './covid/covid.component';
 import { ErrorComponent } from './error/error.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ErrorComponent } from './error/error.component';
     StoryComponent,
     InterviewsComponent,
     CovidComponent,
-    ErrorComponent
+    ErrorComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
