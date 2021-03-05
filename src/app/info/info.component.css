@@ -1,0 +1,25 @@
+.content{
+  margin: 100px 50px;
+}
+
+.container{
+  width: 880px;
+  display:block;
+  margin:auto;
+}
+
+h3{
+  font-size: 20px;
+
+}
+
+img{
+  display:block;
+  margin:auto;
+  width: 880px;
+  height: 470px
+}
+
+.ptext{
+  font-size: 20px;
+}

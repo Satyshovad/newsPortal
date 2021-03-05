@@ -6,6 +6,7 @@ import {InterviewsComponent} from './interviews/interviews.component';
 import {CovidComponent} from './covid/covid.component';
 import {ErrorComponent} from './error/error.component';
 import {ContactsComponent} from './contacts/contacts.component';
+import {InfoComponent} from './info/info.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'interviews', component: InterviewsComponent},
   {path: 'covid', component: CovidComponent},
   {path: 'contacts', component: ContactsComponent},
+  {path: 'info', component: InfoComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: ErrorComponent}
 ];

@@ -14,6 +14,7 @@ import { InterviewsComponent } from './interviews/interviews.component';
 import { CovidComponent } from './covid/covid.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     InterviewsComponent,
     CovidComponent,
     ErrorComponent,
-    ContactsComponent
+    ContactsComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
