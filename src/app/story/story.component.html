@@ -1,67 +1,77 @@
-<div class="st-cont">
-    <div class="cont-1">
+<div class="st-cont" >
+    <div class="cont-1" *ngFor="let post of posts;">
       <div class="cont-item">
-        <img src="https://krimzdorovie.ru/media/k2/galleries/415_m/bigstock-Girl-at-dentist-in-dentist-cli-118390988.jpg" style="width: 250px; height: 180px" alt="photo">
+        <img src={{post.img}} style="width: 250px; height: 180px" alt="photo">
         <div class="cont-title">
-          <h4>Dental treatment and removal</h4>
-          <p>Who can get dental services for free and how</p>
-        </div>
-      </div>
-      <div class="cont-item">
-        <img src="https://avatars.mds.yandex.net/get-zen_doc/1718701/pub_5d98707ba06eaf00aeaab03b_5d9a067b4e057700ae87a8cd/scale_1200" style="width: 250px ; height: 180px" alt="photo">
-        <div class="cont-title">
-          <h4>State employees salary increase</h4>
-          <p>How much will teachers, doctors and social workers receive?</p>
-        </div>
-      </div>
-      <div class="cont-item">
-        <img src="https://informburo.kz/storage/photos/43/main/C7L1YWG70dY9foZWP85S9Ro2LgHnEyYEyO4FB5j3.jpg" style="width: 250px; height: 180px" alt="photo">
-        <div class="cont-title">
-          <h4>Investments available to everyone</h4>
-          <p>How to start investing with $ 10 in the Tabys app</p>
-        </div>
-      </div>
-      <div class="cont-item">
-        <img src="https://informburo.kz/storage/photos/59/main/6Zdt5fYVbhCUBmfSyFkWSLElwhREL1BXFKkIWg8J.jpg" style="width: 250px; height: 180px" alt="photo">
-        <div class="cont-title">
-          <h4>Profitable protection</h4>
-          <p>How to get discounts and bonuses for car insurance</p>
+          <h3>{{post.name}}</h3>
+          <p>{{post.title}}</p>
         </div>
       </div>
     </div>
-
-    <div class="cont-1">
-      <div class="cont-item">
-        <img src="https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg" style="width: 250px; height: 180px" alt="photo">
-        <div class="cont-title">
-          <h4>Infected with covid</h4>
-          <p>During the day, 766 cases of Covid-19 infection were detected in Kz</p>
-        </div>
-      </div>
-      <div class="cont-item">
-        <img src="https://www.1zoom.ru/big2/47/234125-svetik.jpg" style="width: 250px ; height: 180px" alt="photo">
-        <div class="cont-title">
-          <h4>Weather forecast for February 21</h4>
-          <p> A low-level snowstorm is expected in the north of Kz </p>
-        </div>
-      </div>
-      <div class="cont-item">
-        <img src="https://s0.rbk.ru/v6_top_pics/resized/1440xH/media/img/2/09/756138226676092.jpg" style="width: 250px; height: 180px" alt="photo">
-        <div class="cont-title">
-          <h4>Clubhouse</h4>
-          <p>What it is, why it is needed and why everyone is talking about it</p>
-        </div>
-      </div>
-      <div class="cont-item">
-        <img src="https://informburo.kz/storage/photos/59/main/6Zdt5fYVbhCUBmfSyFkWSLElwhREL1BXFKkIWg8J.jpg" style="width: 250px; height: 180px" alt="photo">
-        <div class="cont-title">
-          <h4>Profitable protection</h4>
-          <p>How to get discounts and bonuses for car insurance</p>
-        </div>
-      </div>
-    </div>
-
 </div>
+
+
+
+
+
+
+      <!--
+      https://krimzdorovie.ru/media/k2/galleries/415_m/bigstock-Girl-at-dentist-in-dentist-cli-118390988.jpg
+      <div class="cont-item">
+         <img src="https://avatars.mds.yandex.net/get-zen_doc/1718701/pub_5d98707ba06eaf00aeaab03b_5d9a067b4e057700ae87a8cd/scale_1200" style="width: 250px ; height: 180px" alt="photo">
+         <div class="cont-title">
+           <h4>State employees salary increase</h4>
+           <p>How much will teachers, doctors and social workers receive?</p>
+         </div>
+       </div>
+       <div class="cont-item">
+         <img src="https://informburo.kz/storage/photos/43/main/C7L1YWG70dY9foZWP85S9Ro2LgHnEyYEyO4FB5j3.jpg" style="width: 250px; height: 180px" alt="photo">
+         <div class="cont-title">
+           <h4>Investments available to everyone</h4>
+           <p>How to start investing with $ 10 in the Tabys app</p>
+         </div>
+       </div>
+       <div class="cont-item">
+         <img src="https://informburo.kz/storage/photos/59/main/6Zdt5fYVbhCUBmfSyFkWSLElwhREL1BXFKkIWg8J.jpg" style="width: 250px; height: 180px" alt="photo">
+         <div class="cont-title">
+           <h4>Profitable protection</h4>
+           <p>How to get discounts and bonuses for car insurance</p>
+         </div>
+       </div>
+     </div>
+
+     <div class="cont-1">
+       <div class="cont-item">
+         <img src="https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg" style="width: 250px; height: 180px" alt="photo">
+         <div class="cont-title">
+           <h4>Infected with covid</h4>
+           <p>During the day, 766 cases of Covid-19 infection were detected in Kz</p>
+         </div>
+       </div>
+       <div class="cont-item">
+         <img src="https://www.1zoom.ru/big2/47/234125-svetik.jpg" style="width: 250px ; height: 180px" alt="photo">
+         <div class="cont-title">
+           <h4>Weather forecast for February 21</h4>
+           <p> A low-level snowstorm is expected in the north of Kz </p>
+         </div>
+       </div>
+       <div class="cont-item">
+         <img src="https://s0.rbk.ru/v6_top_pics/resized/1440xH/media/img/2/09/756138226676092.jpg" style="width: 250px; height: 180px" alt="photo">
+         <div class="cont-title">
+           <h4>Clubhouse</h4>
+           <p>What it is, why it is needed and why everyone is talking about it</p>
+         </div>
+       </div>
+       <div class="cont-item">
+         <img src="https://informburo.kz/storage/photos/59/main/6Zdt5fYVbhCUBmfSyFkWSLElwhREL1BXFKkIWg8J.jpg" style="width: 250px; height: 180px" alt="photo">
+         <div class="cont-title">
+           <h4>Profitable protection</h4>
+           <p>How to get discounts and bonuses for car insurance</p>
+         </div>
+       </div>
+     </div>
+
+</div>-->
 
 
 <router-outlet></router-outlet>

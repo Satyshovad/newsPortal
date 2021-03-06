@@ -1,35 +1,35 @@
 .st-cont{
   padding-bottom: 70px;
-  margin: -8px -8px;
+  padding-top: 10px;
+  margin: 80px 50px;
+  background-color: Snow;
 }
 
 .cont-1{
   display: flex;
-  margin: 0 30px;
+  margin: 50px 100px;
+  padding-top: 30px;
+  height: 180px;
+  position: relative;
+}
+.cont-title{
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  margin: auto 40px;
 }
 
-.cont-item{
-  background: #fff;
-  padding: 40px 26px 10px 40px;
-  margin: 15px 19px;
-  text-align: center;
-  border: 1px solid #fff;
-  border-radius: 15px;
+img{
+  margin-top: -10px;
 }
 
-.cont-item{
-  width: 360px;
-  height: 310px;
+.cont-title > p{
+  font-size: 18px;
+}
+.cont-title > h3{
+  font-size: 20px;
 }
 
-.cont-item  > p{
-  text-align: center;
-  color: #363636;
-}
-
-.cont-item  > h4{
-  margin-top: 5px;
-}
 
 
 
