@@ -2,18 +2,18 @@
   <div class="content">
     <h2>{{title}}</h2>
     <div class="inside-content">
-      <h3>Informburo Office</h3>
+      <h3>{{iText}} Office</h3>
       <p>050000, Almaty, D. Kunaev str., 77, office 512</p>
-      <p>e-mail: <a style="color: brown" (click)='buttonClick()'>astana@informburo.kz, almaty@informburo.kz</a></p>
-      <p><b>Informburo </b>news on Channel 31"</p>
-      <p>Phone number: <a style="color: brown" (click)='buttonClick()'>+7 (727) 315 95 31</a>(Almaty)</p>
-      <p>e-mail: <a style="color: brown" (click)='buttonClick()'>informburo@31.kz</a></p>
-      <p>informburo.kz: <a style="color: brown" (click)='buttonClick()'>+7 (727) 355 03 11</a></p>
+      <p>e-mail: <a [style.color]="'brown'" (click)='buttonClick()'>astana@informburo.kz, almaty@informburo.kz</a></p>
+      <p><b>{{iText}}  </b>news on Channel 31"</p>
+      <p>Phone number: <a  (click)='buttonClick()'>+7 (727) 315 95 31</a>(Almaty)</p>
+      <p>e-mail: <a [style.color]="'brown'" (click)='buttonClick()'>informburo@31.kz</a></p>
+      <p>{{iText| lowercase}}.kz: <a  (click)='buttonClick()'>+7 (727) 355 03 11</a></p>
       <hr>
-      <p>General questions: <a style="color: brown" (click)='buttonClick()'>info@informburo.kz</a></p>
-      <p>Technical questions: <a style="color: brown" (click)='buttonClick()'>support@informburo.kz</a></p>
-      <p>You can send your CV to: <a style="color: brown" (click)='buttonClick()'>cv@informburo.kz</a></p>
-      <p>For advertising, placement of PR materials and information partnership: <a style="color: brown" (click)='buttonClick()'>sales@informburo.kz</a></p>
+      <p>General questions: <a [style.color]="'brown'" (click)='buttonClick()'>info@informburo.kz</a></p>
+      <p>Technical questions: <a [style.color]="'brown'" (click)='buttonClick()'>support@informburo.kz</a></p>
+      <p>You can send your CV to: <a [style.color]="'brown'" (click)='buttonClick()'>cv@informburo.kz</a></p>
+      <p>For advertising, placement of PR materials and information partnership: <a [style.color]="'brown'" (click)='buttonClick()'>sales@informburo.kz</a></p>
 
     </div>
   </div>
@@ -22,4 +22,4 @@
 
 <app-latestnews></app-latestnews>
 
-<router-outlet></router-outlet>
+

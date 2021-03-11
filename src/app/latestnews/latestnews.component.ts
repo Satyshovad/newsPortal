@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestnewsComponent implements OnInit {
   title = 'Latest News';
+  hText = 'Current informations in our country and cities.';
   constructor() { }
 
   ngOnInit(): void {

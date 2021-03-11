@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
   title = 'Contacts';
+  iText = 'Informburo';
   constructor() { }
 
   ngOnInit(): void {
   }
-
   // tslint:disable-next-line:typedef
   buttonClick() {
      alert('Thank you, contact us!');

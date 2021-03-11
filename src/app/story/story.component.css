@@ -30,6 +30,12 @@ img{
   font-size: 20px;
 }
 
+.odd{
+  background-color: Seashell;
+}
 
+.even{
+  background-color: AliceBlue;
+}
 
 

@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   findItem(item: string){
-    this.inputedItem.emit(item);
+    this.inputedItem.emit(this.item);
     alert('We don\'t have some information');
   }
 }
