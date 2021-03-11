@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
+  constructor() { }
   title = 'Contacts';
   iText = 'Informburo';
-  constructor() { }
+  myStyle = {
+    color: 'brown'
+};
 
   ngOnInit(): void {
   }
