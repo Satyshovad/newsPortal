@@ -5,6 +5,24 @@
       <p>Acceptance of documents will last until March 31.<br>
         The acceptance of documents for obtaining a preferential mortgage under the "Almaty Zhastary" program has begun. As of 12.30 on March 10, 1229 applications have already been submitted. The Department of Housing Policy of Almaty checks the authenticity of the attached documents and selects participants according to the points scored. The number of points will depend on the number of years of marriage, the presence of children, the duration of continuous work experience in the category.</p>
       <p>Published date: {{toDate | date: 'medium'}} </p>
+      <button (click)="show1()">More information</button>
+      <div *ngIf="ival">
+        <h3>Program terms and Conditions:</h3>
+
+          <p>* the maximum loan amount is up to 18 million tenge;<br>
+          * interest rate – 5% (GESV 5.2%);<br>
+          * initial payment – 10%;<br>
+          * the possibility of purchasing primary and secondary housing;<br>
+          * the maximum term is up to 25 years.<br></p>
+          <p>For example, when buying an apartment worth 10 million tenge, the loan payment, taking into account the peculiarities of the housing construction savings system, will amount to 83,333 tenge in the first 8 years, and the remaining 11 years will decrease and will be equal to 46,000 tenge.
+
+        <h3>Requirements for participation in the program:</h3>
+
+          <p> * age up to 35 years (inclusive);<br>
+           * no property owned in the last 5 years;<br>
+           * the presence of a permanent job for at least the last six months with the presence of mandatory pension contributions in the following categories: medical workers, teachers, writers and cultural workers, teachers and researchers of universities and research institutes, journalists, social workers, law enforcement officers.<br>
+          People who hold any positions in these areas will be able to participate in the program.</p>
+      </div>
     </div>
     <div class="choosing1-bg">
       <img src="https://informburo.kz/storage/photos/108/main/roWKSroyfWUia2GnTi81gNkaOMfiI1AO1fuHuNOy.jpg" style="height:457px; width: 620px;" alt="background photo">
