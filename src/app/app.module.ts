@@ -15,6 +15,8 @@ import { CovidComponent } from './covid/covid.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { InfoComponent } from './info/info.component';
+import {UserPipe} from './user.pipe';
+import {FilterPipe} from './filter.pipe';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { InfoComponent } from './info/info.component';
     CovidComponent,
     ErrorComponent,
     ContactsComponent,
-    InfoComponent
+    InfoComponent,
+    UserPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

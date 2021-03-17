@@ -11,9 +11,9 @@
     <a routerLink="/contacts"><b>Contacts</b></a>
     <form action="#">
       <label>
-        <input type="search" placeholder="Search.." name="item" [(ngModel)]="item" style="width: 145px">
+        <input type="search" placeholder="Search.." name="item" [(ngModel)]="word" style="width: 145px">
       </label>
-      <button type="submit" (click)="findItem(item)">Find</button>
+      <button type="submit" (click)="addItem(word)">Find</button>
     </form>
     </div>
 </header>

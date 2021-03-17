@@ -1,11 +1,17 @@
-/*import {Pipe, PipeTransform} from '@angular/core’;
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-  name: 'userData'
-})*/
+  name: 'textSize'
+})
 
-/*export class PowerPipe implements PipeTransform {
-  transform(firstName: string, lastName:string[]): string {
-    return firstName +" "+ lastName.join(" ");
+export class UserPipe implements PipeTransform {
+  // tslint:disable-next-line:typedef
+  transform(value: string, limit?: number) {
+    if (!value) {
+      return null;
+    }
+    const actualLimit = (limit) ? limit : 50;
+    return value.substr(0, actualLimit) + '...';
   }
-}*/
+}
+

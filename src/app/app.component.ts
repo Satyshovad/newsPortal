@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'newsPortal';
+  wordItem: string;
+
+  // tslint:disable-next-line:typedef
+  addItem(item: string){
+    this.wordItem = item;
+    alert('We don\'t have some information ' + item);
+    console.log(this.wordItem);
+  }
+
 }
+
+

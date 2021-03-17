@@ -24,4 +24,5 @@ export class HomeComponent implements OnInit {
   show1() {
     this.ival = !this.ival;
   }
+
 }

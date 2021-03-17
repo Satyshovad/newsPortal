@@ -6,15 +6,14 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  item: string;
+  word: string;
   @Output() inputedItem: EventEmitter<string> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
   // tslint:disable-next-line:typedef
-  findItem(item: string){
-    this.inputedItem.emit(this.item);
-    alert('We don\'t have some information');
+  addItem(word: string){
+    this.inputedItem.emit(word);
   }
 }

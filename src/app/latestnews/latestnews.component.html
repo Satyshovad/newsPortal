@@ -4,7 +4,24 @@
     <p [innerText]="hText"></p>
   </div>
 
-  <div class="box-1">
+  <div class="box-1" >
+    <div class="box-item" *ngFor="let news of newsItems">
+      <img src={{news.img}} style="width: 250px; height: 180px" alt="photo">
+      <h4>{{news.title}}</h4>
+      <p>{{news.content| textSize}}</p>
+    </div>
+  </div>
+
+  <!--<div class="box-1" >
+    <div class="box-item" *ngFor="let news of newsItems">
+      <img src={{news.img}} style="width: 250px; height: 180px" alt="photo">
+      <h4>{{news.title}}</h4>
+      <p>{{news.content}}</p>
+    </div>
+  </div>-->
+
+
+  <!--<div class="box-1">
     <div class="box-item">
       <img src="https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg" style="width: 250px; height: 180px" alt="photo">
       <h4>Infected with covid</h4>
@@ -38,6 +55,6 @@
       <h4 >Stanislav Chan, Home Credit Bank</h4>
       <p>All mobile applications will be integrated into ecosystems</p>
     </div>
-  </div>
+  </div>-->
 </section>
 
