@@ -16,7 +16,6 @@ import { ErrorComponent } from './error/error.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { InfoComponent } from './info/info.component';
 import {UserPipe} from './user.pipe';
-import {FilterPipe} from './filter.pipe';
 
 
 @NgModule({
@@ -33,8 +32,7 @@ import {FilterPipe} from './filter.pipe';
     ErrorComponent,
     ContactsComponent,
     InfoComponent,
-    UserPipe,
-    FilterPipe
+    UserPipe
   ],
   imports: [
     BrowserModule,
