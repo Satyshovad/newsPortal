@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   // tslint:disable-next-line:typedef
-  addItem(word: string){
+  addItem( word: string){
     this.inputedItem.emit(word);
   }
 }

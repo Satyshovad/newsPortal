@@ -10,12 +10,11 @@ export class AppComponent {
   wordItem: string;
 
   // tslint:disable-next-line:typedef
-  addItem(item: string){
+  addItems(item: string){
     this.wordItem = item;
     alert('We don\'t have some information about -  ' + item);
     console.log(this.wordItem);
   }
-
 }
 
 
