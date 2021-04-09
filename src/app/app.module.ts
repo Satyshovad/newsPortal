@@ -16,7 +16,18 @@ import { ErrorComponent } from './error/error.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { InfoComponent } from './info/info.component';
 import {UserPipe} from './user.pipe';
+import {HttpClientModule} from '@angular/common/http';
+import {Routes} from '@angular/router';
+import {ContactsCanDeactivateGuardService} from './services/contacts-can-deactivate-guard.service';
+import {CanActivateGuardService} from './services/can-activate-guard.service';
 
+const appRoutes: Routes = [
+  {
+    path: 'contacts',
+    component: ContactsComponent,
+    canDeactivate: [ContactsCanDeactivateGuardService, CanActivateGuardService]
+  }
+];
 
 @NgModule({
   declarations: [
@@ -37,9 +48,10 @@ import {UserPipe} from './user.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    /*HttpClientModule*/
   ],
-  providers: [],
+  providers: [ContactsCanDeactivateGuardService, CanActivateGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

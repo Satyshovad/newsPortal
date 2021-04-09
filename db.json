@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "img": "https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg",
+      "title": "Infected with covid",
+      "content": "During the day, 766 cases of Covid-19 infection were detected in Kz"
+    },
+    {
+      "id": 2,
+      "img": "https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg",
+      "title": "Infected with covid",
+      "content": "During the day, 766 cases of Covid-19 infection were detected in Kz"
+    },
+    {
+      "id": 3,
+      "img": "https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg",
+      "title": "Infected with covid",
+      "content": "During the day, 766 cases of Covid-19 infection were detected in Kz"
+    },
+    {
+      "id": 4,
+      "img": "https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg",
+      "title": "Infected with covid",
+      "content": "During the day, 766 cases of Covid-19 infection were detected in Kz"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'newsPortal';
   wordItem: string;
+
+  constructor(private router: Router) {
+  }
 
   // tslint:disable-next-line:typedef
   addItems(item: string){

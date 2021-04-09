@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-contacts',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
+  @ViewChild('Form') public createForm: NgForm;
   constructor() { }
   title = 'Contacts';
   iText = 'Informburo';
