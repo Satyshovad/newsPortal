@@ -1,15 +1,22 @@
-/*import {CanActivate, CanDeactivate} from '@angular/router';
-import {ContactsComponent} from '../contacts/contacts.component';
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
+import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+import {UserService} from './user.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CanActivateGuardService implements CanActivate<ContactsComponent>{
-  constructor() { }
-
-  canActivate(component: ContactsComponent): boolean {
-    return confirm('Are you sure to leave this page?');
+export class CanActivateGuard implements CanActivate {
+  constructor(private user: UserService) {
   }
-}*/
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): boolean {
+    if (this.user.isAdmin()){
+      return true;
+    }
+    return false;
+  }
+}
+
+

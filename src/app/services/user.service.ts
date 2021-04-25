@@ -15,6 +15,10 @@ export class UserService {
     this.loggingService.log('Shared value: ' + userValue);
     return userValue;
   }
+  // tslint:disable-next-line:typedef
+  isAdmin(){
+    return true;
+  }
 }
 
 
