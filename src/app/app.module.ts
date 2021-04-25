@@ -19,10 +19,9 @@ import { UserPipe } from './user.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactsCanDeactivateGuardService } from './services/contacts-can-deactivate-guard.service';
 import { CanLoadGuardService } from './services/can-load-guard.service';
-/*import { CanActivateGuardService } from './services/can-activate-guard.service';*/
 import { ReactiveFormsModule } from '@angular/forms';
 import {UserService} from './services/user.service';
-import { AdminComponent } from './admin/admin.component';
+import {AdminComponent } from './admin/admin.component';
 import {CanActivateGuard} from './services/can-activate-guard.service';
 
 /*const appRoutes: Routes = [
