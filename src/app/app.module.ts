@@ -17,17 +17,20 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { InfoComponent } from './info/info.component';
 import {UserPipe} from './user.pipe';
 import {HttpClientModule} from '@angular/common/http';
-import {Routes} from '@angular/router';
 import {ContactsCanDeactivateGuardService} from './services/contacts-can-deactivate-guard.service';
-import {CanActivateGuardService} from './services/can-activate-guard.service';
+import {CanLoadGuardService} from './services/can-load-guard.service';
+/*import {CanActivateGuardService} from './services/can-activate-guard.service';*/
+import {ReactiveFormsModule} from '@angular/forms';
 
-const appRoutes: Routes = [
-  {
-    path: 'contacts',
-    component: ContactsComponent,
-    canDeactivate: [ContactsCanDeactivateGuardService, CanActivateGuardService]
-  }
-];
+/*const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent},
+  { path: 'story', component: StoryComponent},
+  { path: 'interviews', component: InterviewsComponent},
+  { path: 'covid', component: CovidComponent, canLoad:[CanLoadGuardService]},
+  { path: 'contacts', component: ContactsComponent, canDeactivate: [ContactsCanDeactivateGuardService]},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+];*/
+
 
 @NgModule({
   declarations: [
@@ -49,9 +52,10 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    /*HttpClientModule*/
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [ContactsCanDeactivateGuardService, CanActivateGuardService],
+  providers: [ContactsCanDeactivateGuardService, CanLoadGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

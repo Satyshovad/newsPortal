@@ -1,4 +1,4 @@
-import {CanActivate, CanDeactivate} from '@angular/router';
+/*import {CanActivate, CanDeactivate} from '@angular/router';
 import {ContactsComponent} from '../contacts/contacts.component';
 import {Injectable} from '@angular/core';
 
@@ -12,4 +12,4 @@ export class CanActivateGuardService implements CanActivate<ContactsComponent>{
   canActivate(component: ContactsComponent): boolean {
     return confirm('Are you sure to leave this page?');
   }
-}
+}*/

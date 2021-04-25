@@ -7,13 +7,14 @@ import {CovidComponent} from './covid/covid.component';
 import {ErrorComponent} from './error/error.component';
 import {ContactsComponent} from './contacts/contacts.component';
 import {InfoComponent} from './info/info.component';
+import {ContactsCanDeactivateGuardService} from './services/contacts-can-deactivate-guard.service';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'story', component: StoryComponent},
   {path: 'interviews', component: InterviewsComponent},
   {path: 'covid', component: CovidComponent},
-  {path: 'contacts', component: ContactsComponent},
+  {path: 'contacts', component: ContactsComponent, canDeactivate: [ContactsCanDeactivateGuardService]},
   {path: 'info', component: InfoComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: ErrorComponent}

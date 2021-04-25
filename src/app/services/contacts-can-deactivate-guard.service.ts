@@ -1,15 +1,25 @@
 import {ContactsComponent} from '../contacts/contacts.component';
-import {CanDeactivate} from '@angular/router';
+import {ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot} from '@angular/router';
 import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
 
+export interface IDeactivateComponent{
+  canExit: () => Observable<boolean> | Promise<boolean> | boolean;
+}
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ContactsCanDeactivateGuardService implements CanDeactivate<ContactsComponent>{
-  constructor() { }
+@Injectable()
+  export class ContactsCanDeactivateGuardService implements CanDeactivate<ContactsComponent> {
+    component: object;
+    route: ActivatedRouteSnapshot;
 
-  canDeactivate(component: ContactsComponent): boolean {
-    return confirm('Are you sure to leave this page?');
-  }
+    constructor() {
+    }
+
+    canDeactivate(component: IDeactivateComponent,
+                  route: ActivatedRouteSnapshot,
+                  state: RouterStateSnapshot,
+                  nextState?: RouterStateSnapshot): Observable<boolean>|Promise<boolean> | boolean {
+
+      return component.canExit ? component.canExit() : true;
+    }
 }

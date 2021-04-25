@@ -10,6 +10,11 @@
   <h3>- Stanislav, can we say that this year has made banks even more digital?</h3>
   <p class="ptext">– Yes, definitely, this year was significant in the development of digital services and the rapid transition of customers from the traditional environment to online. Now the availability of a high-quality mobile application is an integral part of not only the banking sector. Today, it is very difficult to imagine a serious company that does not have a high-quality mobile application or is not properly represented in the online environment.</p>
   <p class="ptext">It is clear that this leap in digitalization did not occur organically, but was caused by the influence of external factors, but these conditions accelerated the processes of digitalization so much that we were where we should have been in three years, and maybe even in five years, and this applies not only to the banking sector.</p>
+  <div class="form-group">
+    <label>You can leave your comment...</label><br>
+    <input type="text" class="form-control" [formControl]="comment"] style="width: 300px; height: 30px">
+  </div>
+  <input type="submit" class="btn" value="Add comment"><br>
   <button (click)="show()">Other Posts(if you want to see click this button!)</button>
   <div *ngIf="otherPosts">
     <app-latestnews></app-latestnews>
