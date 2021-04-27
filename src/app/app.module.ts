@@ -23,6 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {UserService} from './services/user.service';
 import {AdminComponent } from './admin/admin.component';
 import {CanActivateGuard} from './services/can-activate-guard.service';
+import {PostService} from './services/post.service';
+import {Post1Service} from './services/post1.service';
 
 /*const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -58,7 +60,7 @@ import {CanActivateGuard} from './services/can-activate-guard.service';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [ContactsCanDeactivateGuardService, CanLoadGuardService, UserService, CanActivateGuard],
+  providers: [ContactsCanDeactivateGuardService, CanLoadGuardService, UserService, CanActivateGuard, PostService, Post1Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

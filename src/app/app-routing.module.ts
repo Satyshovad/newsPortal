@@ -10,6 +10,7 @@ import {InfoComponent} from './info/info.component';
 import {ContactsCanDeactivateGuardService} from './services/contacts-can-deactivate-guard.service';
 import {AdminComponent} from './admin/admin.component';
 import {CanActivateGuard} from './services/can-activate-guard.service';
+import {Post1Service} from './services/post1.service';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path: 'interviews', component: InterviewsComponent},
   {path: 'covid', component: CovidComponent},
   {path: 'contacts', component: ContactsComponent, canDeactivate: [ContactsCanDeactivateGuardService]},
-  {path: 'info', component: InfoComponent},
+  {path: 'info', component: InfoComponent,  resolve: {posts: Post1Service}},
   {path: 'admin', component: AdminComponent, canActivate: [CanActivateGuard]},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: ErrorComponent}

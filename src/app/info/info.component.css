@@ -21,7 +21,7 @@ img{
 }
 
 .ptext{
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .btn{
@@ -29,4 +29,9 @@ img{
   color: white;
   margin-top: 10px;
   margin-bottom: 30px;
+}
+
+.table-news{
+  margin-top: 50px;
+  margin-bottom: 70px;
 }

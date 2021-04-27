@@ -12,8 +12,9 @@ export class CanActivateGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
-    if (this.user.isAdmin()){
-      return true;
+    // tslint:disable-next-line:triple-equals
+    if (this.user.isAdmin() == true){
+      return window.confirm('h1');
     }
     return false;
   }
