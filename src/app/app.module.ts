@@ -26,15 +26,6 @@ import {CanActivateGuard} from './services/can-activate-guard.service';
 import {PostService} from './services/post.service';
 import {Post1Service} from './services/post1.service';
 
-/*const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'story', component: StoryComponent},
-  { path: 'interviews', component: InterviewsComponent},
-  { path: 'covid', component: CovidComponent, canLoad:[CanLoadGuardService]},
-  { path: 'contacts', component: ContactsComponent, canDeactivate: [ContactsCanDeactivateGuardService]},
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-];*/
-
 
 @NgModule({
   declarations: [
@@ -51,14 +42,14 @@ import {Post1Service} from './services/post1.service';
     ContactsComponent,
     InfoComponent,
     UserPipe,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [ContactsCanDeactivateGuardService, CanLoadGuardService, UserService, CanActivateGuard, PostService, Post1Service],
   bootstrap: [AppComponent]

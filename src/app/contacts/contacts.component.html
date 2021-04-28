@@ -4,32 +4,104 @@
     <div class="inside-content">
       <h3>{{iText}} Office</h3>
       <p>050000, Almaty, D. Kunaev str., 77, office 512</p>
-      <p>e-mail: <a [ngStyle]="myStyle" (click)='buttonClick()'>astana@informburo.kz, almaty@informburo.kz</a></p>
+      <p>e-mail: <a [ngStyle]="brown" (click)='buttonClick()'>astana@informburo.kz, almaty@informburo.kz</a></p>
       <p><b>{{iText}}  </b>news on Channel 31"</p>
       <p>Phone number: <a (click)='buttonClick()'>+7 (727) 315 95 31</a>(Almaty)</p>
-      <p>e-mail: <a [ngStyle]="myStyle" (click)='buttonClick()'>informburo@31.kz</a></p>
+      <p>e-mail: <a [ngStyle]="brown" (click)='buttonClick()'>informburo@31.kz</a></p>
       <p>{{iText| lowercase}}.kz: <a  (click)='buttonClick()'>+7 (727) 355 03 11</a></p>
       <hr>
-      <p>General questions: <a [ngStyle]="myStyle" (click)='buttonClick()'>info@informburo.kz</a></p>
-      <p>Technical questions: <a [ngStyle]="myStyle" (click)='buttonClick()'>support@informburo.kz</a></p>
-      <p>You can send your CV to: <a [ngStyle]="myStyle" (click)='buttonClick()'>cv@informburo.kz</a></p>
-      <p>For advertising, placement of PR materials and information partnership: <a [ngStyle]="myStyle" (click)='buttonClick()'>sales@informburo.kz</a></p>
+      <p>General questions: <a [ngStyle]="brown" (click)='buttonClick()'>info@informburo.kz</a></p>
+      <p>Technical questions: <a [ngStyle]="brown" (click)='buttonClick()'>support@informburo.kz</a></p>
+      <p>You can send your CV to: <a [ngStyle]="brown" (click)='buttonClick()'>cv@informburo.kz</a></p>
+      <p>For advertising, placement of PR materials and information partnership: <a [ngStyle]="brown" (click)='buttonClick()'>sales@informburo.kz</a></p>
 
       <div class = "texta">
-        <h1>You can leave your suggestion here</h1>
+        <h2>You can leave your details here if you are looking for a job...</h2>
+        <!--FirstName-->
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)" style="margin-bottom: -100px" >
+          <div>
+            <label for="firstname">Firstname:</label>
+            <input type="text" id="firstname" minlength="4" maxLength="12" pattern="^[a-zA-Z]+$"
+                   name="firstname" [(ngModel)]="person.firstname" required #firstname="ngModel" />
+            <div [style.color]="'red'" *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)">
+              Invalid First Name
+              <div *ngIf="firstname?.errors?.required">
+                First Name is required
+              </div>
+              <div *ngIf="firstname?.errors?.minlength">
+                First Name min length error {{firstname?.errors?.minlength?.requiredLength}}
+              </div>
+              <div *ngIf="firstname?.errors?.pattern">
+                First Name must contain only latin letters
+              </div>
+            </div>
+          </div>
 
-        <form >
+          <!--LastName-->
+            <div>
+              <label for="lastname" >Lastname:</label>
+              <input type="text" id="lastname" minlength="5" maxLength="16" pattern="^[a-zA-Z]+$"
+                     name="lastname" [(ngModel)]="person.lastname" required #lastname="ngModel" />
+              <div [style.color]="'red'" *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)">
+                Invalid Lastname
+                <div *ngIf="lastname?.errors?.required">
+                  Lastname is required
+                </div>
+                <div *ngIf="lastname?.errors?.minlength">
+                  Lastname min length error {{lastname?.errors?.minlength?.requiredLength}}
+                </div>
+                <div *ngIf="lastname?.errors?.pattern">
+                  Lastame must contain only latin letters
+                </div>
+              </div>
+            </div>
+          <!--Email-->
+          <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" minlength="6" maxLength="20" pattern="^[a-z0-9._%+-]+@[a-z]+\.[a-z]{2,4}$"
+                   name="email" [(ngModel)]="person.email" required #email="ngModel" />
+            <div [style.color]="'red'" *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+              Invalid Email
+              <div *ngIf="email?.errors?.required">
+                Email is required
+              </div>
+              <div *ngIf="email?.errors?.minlength">
+                Email min length error {{email?.errors?.minlength?.requiredLength}}
+              </div>
+              <div *ngIf="email?.errors?.pattern">
+                Email must contain latin letters and only . _ % + - symbols, after @ must contain only lowercase.
+              </div>
+            </div>
+          </div>
 
-          <textarea id="w3review" name="w3review" rows="10" cols="70">Start....
-          </textarea>
-          <br><br>
-          <input type="submit" value="Submit">
-          <!--<button (click)="submit()">Submit(Input)</button>-->
+          <!--Telephone number-->
+          <div>
+            <label for="tel" >Telephone number: </label>
+            <input type="text" id="tel" minlength="11" maxLength="12" pattern="^\+?[7-8][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$"
+                   name="tel" [(ngModel)]="person.tel" required #tel="ngModel" />
+            <div [style.color]="'red'" *ngIf="!tel?.valid && (tel?.dirty || tel?.touched)">
+              Invalid Telephone number
+              <div *ngIf="tel?.errors?.required">
+                Telephone number is required
+              </div>
+              <div *ngIf="tel?.errors?.minlength">
+                Telephone number min length error {{tel?.errors?.minlength?.requiredLength}}
+              </div>
+              <div *ngIf="tel?.errors?.pattern">
+                Telephone number must contain only numbers
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <button type="button" (click)="example()">Example</button>
+          <button type="button" (click)="reset(form)">Reset form</button>
+
+          <button type="submit" [ngStyle]="brown" (click)='submit()'>Submit</button>
         </form>
       </div>
     </div>
   </div>
-
 </div>
 
 <app-latestnews></app-latestnews>

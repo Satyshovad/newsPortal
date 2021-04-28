@@ -52,3 +52,10 @@
 .box-item  > h4{
   margin-top: 5px;
 }
+
+.content{
+  position: relative;
+  display: block;
+  top: 60px;
+  left: 50px;
+}
