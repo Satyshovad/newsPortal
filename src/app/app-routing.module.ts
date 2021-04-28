@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'info', component: InfoComponent,  resolve: {posts: Post1Service}},
   {path: 'admin', component: AdminComponent, canActivate: [CanActivateGuard]},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: '**', component: ErrorComponent}
+  {path: '**', component: ErrorComponent},
 ];
 
 @NgModule({

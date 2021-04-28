@@ -26,7 +26,6 @@ import {CanActivateGuard} from './services/can-activate-guard.service';
 import {PostService} from './services/post.service';
 import {Post1Service} from './services/post1.service';
 import {NewsService} from './services/news.service';
-import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -52,7 +51,6 @@ import {RouterModule} from '@angular/router';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule,
   ],
   // tslint:disable-next-line:max-line-length
   providers: [ContactsCanDeactivateGuardService, CanLoadGuardService, UserService, CanActivateGuard, PostService, Post1Service, NewsService],
