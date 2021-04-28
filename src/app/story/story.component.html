@@ -1,8 +1,8 @@
 <div class="st-cont" >
     <div class="cont-1" *ngFor="let post of posts; let o=odd; let e=even;" [ngClass]="{odd: o, even: e}">
-      <div class="cont-item">
+      <div class="cont-item" >
         <img src={{post.img}} style="width: 250px; height: 180px" alt="photo">
-        <div class="cont-title">
+        <div class="cont-title" >
           <h3>{{post.name}}</h3>
           <p>{{post.title}}</p>
         </div>
@@ -10,6 +10,19 @@
     </div>
 </div>
 
+
+
+<!--<div class="st-cont" >
+    <div class="cont-1" *ngFor="let new of news; let o=odd; let e=even;" [ngClass]="{odd: o, even: e}">
+      <div class="cont-item" >
+        <img src={{new.img}} style="width: 250px; height: 180px" alt="photo">
+        <div class="cont-title" >
+          <h3></h3>
+          <p>{{new[index]}}</p>
+        </div>
+      </div>
+    </div>
+</div>-->
 <router-outlet></router-outlet>
 
 

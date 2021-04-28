@@ -25,6 +25,8 @@ import {AdminComponent } from './admin/admin.component';
 import {CanActivateGuard} from './services/can-activate-guard.service';
 import {PostService} from './services/post.service';
 import {Post1Service} from './services/post1.service';
+import {NewsService} from './services/news.service';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -50,8 +52,10 @@ import {Post1Service} from './services/post1.service';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
-  providers: [ContactsCanDeactivateGuardService, CanLoadGuardService, UserService, CanActivateGuard, PostService, Post1Service],
+  // tslint:disable-next-line:max-line-length
+  providers: [ContactsCanDeactivateGuardService, CanLoadGuardService, UserService, CanActivateGuard, PostService, Post1Service, NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

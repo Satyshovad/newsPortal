@@ -1,13 +1,13 @@
 export class Post {
-  constructor(postID: string, picture: string, name: string, title: string) {
-    this.postID = postID;
-    this.picture = picture;
-    this.name = name;
+  constructor(id: string, img: string, title: string, content: string) {
+    this.id = id;
+    this.img = img;
     this.title = title;
+    this.content = content;
   }
 
-  postID: string;
-  picture: string;
-  name: string;
+  id: string;
+  img: string;
   title: string;
+  content: string;
 }

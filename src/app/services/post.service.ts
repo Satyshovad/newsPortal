@@ -1,6 +1,7 @@
 import {Observable, of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 import {Post} from '../../model/post';
+import {HttpClient} from '@angular/common/http';
 
 
 export class PostService{
@@ -22,7 +23,7 @@ export class PostService{
 
   public getPost(id): Observable<Post>{
     // tslint:disable-next-line:triple-equals no-shadowed-variable
-    const Post = this.posts.find(i => i.postID == id);
+    const Post = this.posts.find(i => i.id == id);
     return of(Post).pipe(delay(1500));
   }
 }

@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "news": [
     {
       "id": 1,
       "img": "https://odessa.web2ua.com/wp-content/uploads/2020/05/562235_v_odesskoj_oblasti_za_sutki_vyzdorovelo_r.jpeg",
@@ -28,11 +28,30 @@
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "nickname": "Mike",
+      "body": "some comment"
+    },
+    {
+      "id": 2,
+      "nickname": "Alica",
+      "body": "some comment2"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "story": [
+     {
+    "id": 1,
+    "img": "https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg",
+    "title": "Title of this post"
+    },
+    {
+      "id": 2,
+      "img": "https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg",
+      "title": "Title of this post2"
+    },
+    {
+      "id": 3,
+      "img": "https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg",
+      "title": "Title of this post3"
+    }
+  ]
 }
