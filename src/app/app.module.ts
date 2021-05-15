@@ -18,7 +18,6 @@ import { InfoComponent } from './info/info.component';
 import { UserPipe } from './user.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactsCanDeactivateGuardService } from './services/contacts-can-deactivate-guard.service';
-import { CanLoadGuardService } from './services/can-load-guard.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {UserService} from './services/user.service';
 import {AdminComponent } from './admin/admin.component';
@@ -53,7 +52,7 @@ import {NewsService} from './services/news.service';
     ReactiveFormsModule,
   ],
   // tslint:disable-next-line:max-line-length
-  providers: [ContactsCanDeactivateGuardService, CanLoadGuardService, UserService, CanActivateGuard, PostService, Post1Service, NewsService],
+  providers: [ContactsCanDeactivateGuardService, UserService, CanActivateGuard, PostService, Post1Service, NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

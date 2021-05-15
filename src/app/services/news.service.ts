@@ -3,18 +3,22 @@ import {HttpClient} from '@angular/common/http';
 import {Post} from '../../model/post';
 import {Observable, throwError} from 'rxjs';
 import {catchError, retry} from 'rxjs/operators';
+import {LoggingService} from './logging.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NewsService{
-  constructor(private http: HttpClient) {  }
+  constructor(private loggingService: LoggingService, private http: HttpClient) {  }
 
   url = 'http://localhost:3000/news';
 
   // tslint:disable-next-line:typedef
-  getNews(){
-    return this.http.get<Post[]>(this.url);
+  getNews(post: number): Observable<any> {
+    return this.http.get<Post[]>(`${this.url}post/?postId=${post}`);
+  }
+  getPostById(id: number): Observable<Post>{
+    return this.http.get<Post>(`${this.url}post/${id}`);
   }
 
 /*  getNPost(): Observable<Post> {
