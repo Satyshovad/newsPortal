@@ -1,4 +1,4 @@
-import {Observable, of, throwError} from 'rxjs';
+import {Observable, throwError} from 'rxjs';
 import {catchError, delay, retry} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {Interview} from '../../model/interview';
