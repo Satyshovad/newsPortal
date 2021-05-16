@@ -25,18 +25,6 @@
       "content": "A low-level snowstorm is expected in the north of Kz"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "nickname": "Mike",
-      "body": "some comment"
-    },
-    {
-      "id": 2,
-      "nickname": "Alica",
-      "body": "some comment2"
-    }
-  ],
   "interview": [
      {
       "id": 1,
@@ -55,6 +43,18 @@
       "photo": "https://informburo.kz/storage/photos/123/main/tOgunBhkuIT2XEnQCpDccwefuH5rwclqsk8xGX68.jpg",
       "name": "Stanislav Chan",
       "title": "Home Credit Bank: All mobile applications will be integrated into ecosystems"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "nickname": "Mike",
+      "body": "some comment"
+    },
+    {
+      "id": 2,
+      "nickname": "Alica",
+      "body": "some comment2"
     }
   ]
 }
