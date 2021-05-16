@@ -17,7 +17,7 @@ export class PostService{
   }
 
   public getPosts(): Observable<Post[]>{
-    return of(this.posts).pipe(delay(1500));
+    return of(this.posts).pipe(delay(1000));
   }
 
   public getPost(id): Observable<Post>{

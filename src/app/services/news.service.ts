@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Post} from '../../model/post';
 import {Observable, throwError} from 'rxjs';
 import {catchError, retry} from 'rxjs/operators';
@@ -9,17 +9,32 @@ import {LoggingService} from './logging.service';
   providedIn: 'root'
 })
 export class NewsService{
-  constructor(private loggingService: LoggingService, private http: HttpClient) {  }
+  constructor(private http: HttpClient) {  }
 
-  url = 'http://localhost:3000/news';
+  url = 'http://localhost:3000';
+  getNeews(): Observable<Post>{
+    return this.http.get<Post>(this.url + '/post').pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+  }
+
+  /*getOne(id): Observable<Post>{
+    return this.http.get<Post>(this.url + '/post/' + id)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      );
+  }*/
+
 
   // tslint:disable-next-line:typedef
-  getNews(post: number): Observable<any> {
+  /*getNews(post: number): Observable<any> {
     return this.http.get<Post[]>(`${this.url}post/?postId=${post}`);
   }
   getPostById(id: number): Observable<Post>{
     return this.http.get<Post>(`${this.url}post/${id}`);
-  }
+  }*/
 
 /*  getNPost(): Observable<Post> {
     return this.http.get<Post>(this.url + '/story')
@@ -27,7 +42,7 @@ export class NewsService{
         retry(1),
         catchError(this.handleError)
       );
-  }
+  }*/
 
   // tslint:disable-next-line:typedef
   handleError(error) {
@@ -41,5 +56,5 @@ export class NewsService{
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
-  }*/
+  }
 }
