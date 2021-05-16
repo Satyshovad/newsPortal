@@ -1,12 +1,46 @@
-import {Observable, of} from 'rxjs';
-import {delay} from 'rxjs/operators';
-import {Post} from '../../model/post';
+import {Observable, of, throwError} from 'rxjs';
+import {catchError, delay, retry} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
+import {Interview} from '../../model/interview';
+import {Injectable} from '@angular/core';
 
-
+@Injectable({
+  providedIn: 'root'
+})
 export class PostService{
+  constructor(private http: HttpClient) {
+  }
+  url = 'http://localhost:3000';
 
-  posts: Post[];
+  getInterviews(): Observable<Interview>{
+    return this.http.get<Interview>(this.url + '/interview').pipe(
+      delay(1000));
+  }
+
+  getData(): Observable<Interview>{
+    return this.http.get<Interview>(this.url + '/interview').pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+  }
+
+
+  // tslint:disable-next-line:typedef
+  handleError(error) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      // Get client-side error
+      errorMessage = error.error.message;
+    } else {
+      // Get server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
+  }
+
+
+  /*posts: Post[];
 
   public constructor() {
     this.posts = [
@@ -18,11 +52,11 @@ export class PostService{
 
   public getPosts(): Observable<Post[]>{
     return of(this.posts).pipe(delay(1000));
-  }
+  }*/
 
-  public getPost(id): Observable<Post>{
+  /*public getPost(id): Observable<Post>{
     // tslint:disable-next-line:triple-equals no-shadowed-variable
     const Post = this.posts.find(i => i.postId == id);
     return of(Post).pipe(delay(1500));
-  }
+  }*/
 }

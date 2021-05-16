@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Post} from '../../model/post';
 import {Observable, throwError} from 'rxjs';
 import {catchError, retry} from 'rxjs/operators';
-import {LoggingService} from './logging.service';
+import {Interview} from '../../model/interview';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,13 @@ export class NewsService{
       catchError(this.handleError)
     );
   }
+
+  /*getInterview(): Observable<Interview>{
+    return this.http.get<Interview>(this.url + '/interview').pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+  }*/
 
   /*getOne(id): Observable<Post>{
     return this.http.get<Post>(this.url + '/post/' + id)

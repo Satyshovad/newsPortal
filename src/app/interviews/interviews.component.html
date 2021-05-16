@@ -1,24 +1,10 @@
 <section class="news-section">
-  <div class="news-item">
+  <div class="news-item" *ngFor="let inter of Interview">
     <div class="news-i">
-      <img src="https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg" alt="photo" style="width:580px; height: 450px;">
+      <img src={{inter.photo}} alt="photo" style="width:480px; height: 450px;">
       <div class="news-item-content" style="background: rgba(0, 0, 0, 0.41);">
-        <h3>Anar Zhumagulova</h3>
-        <p>Beeline Kazakhstan: The pandemic has led to the need for absolutely new actions</p>
-      </div>
-    </div>
-    <div class="news-i">
-      <img src="https://informburo.kz/storage/photos/37/main/bHe23Q9T8NAa1o0GmHw1FRjt7sREc5AA2fmdJYtx.jpg" alt="photo" style="width:580px; height: 450px;">
-      <div class="news-item-content" style="background: rgba(0, 0, 0, 0.41);">
-        <h3>Zhanat Yeshmagambetov, head of the KUIS</h3>
-        <p>Escape attempts and mass riots are prevented at the preparation stage</p>
-      </div>
-    </div>
-    <div routerLink="/info" class="news-i">
-      <img src="https://informburo.kz/storage/photos/123/main/tOgunBhkuIT2XEnQCpDccwefuH5rwclqsk8xGX68.jpg" alt="photo" style="width:580px; height: 450px;">
-      <div class="news-item-content" style="background: rgba(0, 0, 0, 0.41);">
-        <h3>Stanislav Chan</h3>
-        <p>Home Credit Bank: All mobile applications will be integrated into ecosystems</p>
+        <h2>{{inter.name}}</h2>
+        <p>{{inter.title}}</p>
       </div>
     </div>
   </div>
@@ -26,3 +12,32 @@
 
 
 <router-outlet></router-outlet>
+
+
+
+<!--
+<section class="news-section">
+  <div class="news-item">
+    <div class="news-i">
+      <img src="https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg" alt="photo" style="width:580px; height: 450px;">
+      <div class="news-item-content" style="background: rgba(0, 0, 0, 0.41);">
+        <h2>Anar Zhumagulova</h2>
+        <p>Beeline Kazakhstan: The pandemic has led to the need for absolutely new actions</p>
+      </div>
+    </div>
+    <div class="news-i">
+      <img src="https://informburo.kz/storage/photos/37/main/bHe23Q9T8NAa1o0GmHw1FRjt7sREc5AA2fmdJYtx.jpg" alt="photo" style="width:580px; height: 450px;">
+      <div class="news-item-content" style="background: rgba(0, 0, 0, 0.41);">
+        <h2>Zhanat Yeshmagambetov</h2>
+        <p>Escape attempts and mass riots are prevented at the preparation stage, (head of the KUIS)</p>
+      </div>
+    </div>
+    <div routerLink="/info" class="news-i">
+      <img src="https://informburo.kz/storage/photos/123/main/tOgunBhkuIT2XEnQCpDccwefuH5rwclqsk8xGX68.jpg" alt="photo" style="width:580px; height: 450px;">
+      <div class="news-item-content" style="background: rgba(0, 0, 0, 0.41);">
+        <h2>Stanislav Chan</h2>
+        <p>Home Credit Bank: All mobile applications will be integrated into ecosystems</p>
+      </div>
+    </div>
+  </div>
+</section>-->

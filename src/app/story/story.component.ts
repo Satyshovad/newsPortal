@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {NewsService} from '../services/news.service';
-import {Post} from '../../model/post';
-import {HttpClient} from '@angular/common/http';
-import {PostService} from '../services/post.service';
-import {ActivatedRoute} from '@angular/router';
-import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-story',
@@ -13,9 +8,6 @@ import {Subscription} from 'rxjs';
 })
 export class StoryComponent implements OnInit{
   Post: any = [];
-  postId: number;
-  private subscription: Subscription;
-
 
   constructor(
     public restApi: NewsService

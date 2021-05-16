@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {IDeactivateComponent} from '../services/contacts-can-deactivate-guard.service';
-import {Observable} from 'rxjs';
 import {Person} from '../../model/person';
 
 @Component({
@@ -63,7 +62,7 @@ export class ContactsComponent implements OnInit, IDeactivateComponent {
 
   // tslint:disable-next-line:typedef
   submit(){
-      alert('Thank you! )' + this.person.firstname +' We will get back to you:)' );
+      alert('Thank you! )' + this.person.firstname + ' We will get back to you:)' );
   }
 }
 

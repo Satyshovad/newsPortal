@@ -4,8 +4,8 @@
 }
 
 .news-item{
-  display: flex;
-  padding: 0 75px;
+  display: table-cell;
+  padding: 0px;
 }
 
 .news-i{
@@ -34,7 +34,7 @@
   transition: .3s;
 }
 
-.news-item-content >h3,
+.news-item-content >h2,
 .news-item-content >p,
 .news-item-content >span{
   color: #fff;

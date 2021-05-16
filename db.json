@@ -37,21 +37,24 @@
       "body": "some comment2"
     }
   ],
-  "story": [
+  "interview": [
      {
-    "id": 1,
-    "img": "https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg",
-    "title": "Title of this post"
+      "id": 1,
+      "photo": "https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg",
+      "name": "Anar Zhumagulova",
+      "title": "Beeline Kazakhstan: The pandemic has led to the need for absolutely new actions"
     },
     {
       "id": 2,
-      "img": "https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg",
-      "title": "Title of this post2"
+      "photo": "https://informburo.kz/storage/photos/37/main/bHe23Q9T8NAa1o0GmHw1FRjt7sREc5AA2fmdJYtx.jpg",
+      "name": "Zhanat Yeshmagambetov",
+      "title": "Escape attempts and mass riots are prevented at the preparation stage, (head of the KUIS)"
     },
     {
       "id": 3,
-      "img": "https://informburo.kz/storage/photos/123/main/IgBwxf5Taw4yx5PxjgkCFgb0FCzVvoF8C0G7157W.jpg",
-      "title": "Title of this post3"
+      "photo": "https://informburo.kz/storage/photos/123/main/tOgunBhkuIT2XEnQCpDccwefuH5rwclqsk8xGX68.jpg",
+      "name": "Stanislav Chan",
+      "title": "Home Credit Bank: All mobile applications will be integrated into ecosystems"
     }
   ]
 }
