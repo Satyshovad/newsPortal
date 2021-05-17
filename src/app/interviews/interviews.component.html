@@ -1,6 +1,6 @@
 <section class="news-section">
   <div class="news-item" *ngFor="let inter of Interview">
-    <div class="news-i">
+    <div class="news-i" routerLink="/info">
       <img src={{inter.photo}} alt="photo" style="width:480px; height: 450px;">
       <div class="news-item-content" style="background: rgba(0, 0, 0, 0.41);">
         <h2>{{inter.name}}</h2>

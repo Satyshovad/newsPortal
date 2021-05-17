@@ -17,8 +17,19 @@
   </div>
   <input type="submit" class="btn" value="Add comment"><br>
 
+  <button (click)="show()">Other Posts(if you want to see click this button!)</button>
+  <div *ngIf="otherPosts">
+    <app-latestnews></app-latestnews>
+  </div>
+</div>
 
-  <div class='table-news'>
+</div>
+
+
+
+
+
+<!--<div class='table-news'>
     <table class='table'>
       <thead>
       <tr>
@@ -32,14 +43,4 @@
       </tr>
       </tbody>
     </table>
-  </div>
-
-  <button (click)="show()">Other Posts(if you want to see click this button!)</button>
-  <div *ngIf="otherPosts">
-    <app-latestnews></app-latestnews>
-  </div>
-</div>
-
-</div>
-
-<router-outlet></router-outlet>
+  </div>-->

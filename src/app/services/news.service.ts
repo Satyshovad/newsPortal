@@ -33,6 +33,13 @@ export class NewsService{
   getPostById(id: number): Observable<Post>{
     return this.http.get<Post>(`${this.url}post/${id}`);
   }*/
+  getPost(id): Observable<Post> {
+    return this.http.get<Post>(this.url + '/post/' + id)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      );
+  }
 
   // tslint:disable-next-line:typedef
   handleError(error) {
