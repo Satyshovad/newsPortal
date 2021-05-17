@@ -10,6 +10,7 @@ import {Person} from '../../model/person';
 })
 export class ContactsComponent implements OnInit, IDeactivateComponent {
   @ViewChild('Form') public createForm: NgForm;
+
   constructor() { }
   title = 'Contacts';
   iText = 'Informburo';
@@ -34,9 +35,10 @@ export class ContactsComponent implements OnInit, IDeactivateComponent {
   }
 
   ngOnInit(): void {
-    this.person = new Person(1, '', '', '', '');
+    this.person = new Person(1, '', '', '', '', '');
     console.log('Person object after init: ', this.person);
   }
+
 
   // tslint:disable-next-line:typedef
   example() {

@@ -1,15 +1,17 @@
 export class Person {
-  id: number;
+  pId: number;
   firstname: string;
   lastname: string;
   email: string;
   tel: string;
+  opinion: string;
 
-  constructor(id: number, firstname: string, lastname: string, email: string, tel: string) {
-    this.id = id;
+  constructor(pId: number, firstname: string, lastname: string, email: string, tel: string, opinion: string) {
+    this.pId = pId;
     this.firstname = firstname;
     this.lastname = lastname;
     this.email = email;
     this.tel = tel;
+    this.opinion = opinion;
   }
 }

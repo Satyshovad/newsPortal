@@ -11,6 +11,7 @@ import {ContactsCanDeactivateGuardService} from './services/contacts-can-deactiv
 import {AdminComponent} from './admin/admin.component';
 import {CanActivateGuard} from './services/can-activate-guard.service';
 import {Post1Service} from './services/post1.service';
+import {NewsService} from './services/news.service';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},

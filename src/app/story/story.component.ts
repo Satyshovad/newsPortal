@@ -4,30 +4,50 @@ import {NewsService} from '../services/news.service';
 @Component({
   selector: 'app-story',
   templateUrl: './story.component.html',
-  styleUrls: ['./story.component.css']
+  styleUrls: ['./story.component.css'],
+  providers: [NewsService]
 })
-export class StoryComponent implements OnInit{
+export class StoryComponent implements OnInit/*, DoCheck*/{
   Post: any = [];
+  searchText: string;
 
-  constructor(
-    public restApi: NewsService
-  ) {  }
+  constructor(public newsService: NewsService) {  }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
     this.loadNeews();
-    /*this.restApi.getOne(this.postId).subscribe((data: {}) => {
+    console.log('StoryComponent:OnInit');
+   /* this.newsService.getOne(this.postId).subscribe((data: {}) => {
       this.Post = data;
       });*/
   }
 
   // tslint:disable-next-line:typedef
   loadNeews(){
-    return this.restApi.getNeews().subscribe((data: {}) => {
+    return this.newsService.getNeews().subscribe((data: {}) => {
       this.Post = data;
       console.log(data);
     });
   }
+
+
+  /*// tslint:disable-next-line:typedef
+  ngDoCheck() {
+    console.log('CategoryComponent:DoCheck');
+    this.newsService.setSearchText(this.searchText);
+  }
+
+  // tslint:disable-next-line:typedef
+  search(searchText: string) {
+    this.newsService.setSearchText(searchText);
+  }*/
+
+
+
+
+
+
+
 
 
   /*constructor(private postService: PostService, private activateRoute: ActivatedRoute){

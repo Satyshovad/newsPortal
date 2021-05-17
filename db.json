@@ -45,16 +45,18 @@
       "title": "Home Credit Bank: All mobile applications will be integrated into ecosystems"
     }
   ],
-  "comments": [
+  "person": [
     {
-      "id": 1,
-      "nickname": "Mike",
-      "body": "some comment"
+      "pId": 1,
+      "firstname": "Mike",
+      "opinion": "Oh shit, this statistic ...",
+      "email": "a_maike@mail"
     },
     {
-      "id": 2,
-      "nickname": "Alica",
-      "body": "some comment2"
+      "pId": 2,
+      "firstname": "Alica",
+      "opinion": "I think through the year everything will be okay.",
+      "email": "alice@mail"
     }
   ]
 }

@@ -24,7 +24,6 @@ import {CanActivateGuard} from './services/can-activate-guard.service';
 import {PostService} from './services/post.service';
 import {Post1Service} from './services/post1.service';
 import {NewsService} from './services/news.service';
-import { NewsComponent } from './story/news/news.component';
 
 
 @NgModule({
@@ -42,8 +41,7 @@ import { NewsComponent } from './story/news/news.component';
     ContactsComponent,
     InfoComponent,
     UserPipe,
-    AdminComponent,
-    NewsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
