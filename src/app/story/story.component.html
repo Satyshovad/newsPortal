@@ -1,6 +1,6 @@
 <div class="st-cont">
     <div class="cont-1"  *ngFor="let post of Post; let o=odd; let e=even;" [ngClass]="{odd: o, even: e}">
-      <div class="cont-item" routerLink="/news">
+      <div class="cont-item" routerLink="news">
         <img src={{post.img}} style="width: 250px; height: 180px" alt="photo">
         <div class="cont-title" >
           <h3>{{post.title}}</h3>

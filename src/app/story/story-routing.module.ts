@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NewsComponent} from './news/news.component';
 
 const routes: Routes = [
-  {path: '/news', component: NewsComponent }
+  {path: '', component: NewsComponent }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
