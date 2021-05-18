@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
 import {PostService} from '../services/post.service';
 
 @Component({
@@ -10,7 +9,7 @@ import {PostService} from '../services/post.service';
 export class InterviewsComponent implements OnInit {
   Interview: any = [];
 
-  constructor(private route: ActivatedRoute, public postService: PostService) { }
+  constructor(public postService: PostService) { }
 
   ngOnInit(): void {
     this.postService.getInterviews().subscribe(data => {

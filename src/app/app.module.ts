@@ -36,7 +36,6 @@ import {StoryModule} from './story/story.module';
     FooterComponent,
     HomeComponent,
     LatestnewsComponent,
-    /*StoryComponent,*/
     InterviewsComponent,
     CovidComponent,
     ErrorComponent,

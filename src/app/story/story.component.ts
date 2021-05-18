@@ -9,7 +9,6 @@ import {NewsService} from '../services/news.service';
 })
 export class StoryComponent implements OnInit/*, DoCheck*/{
   Post: any = [];
-  searchText: string;
 
   constructor(public newsService: NewsService) {  }
 
@@ -30,17 +29,6 @@ export class StoryComponent implements OnInit/*, DoCheck*/{
     });
   }
 
-
-  /*// tslint:disable-next-line:typedef
-  ngDoCheck() {
-    console.log('CategoryComponent:DoCheck');
-    this.newsService.setSearchText(this.searchText);
-  }
-
-  // tslint:disable-next-line:typedef
-  search(searchText: string) {
-    this.newsService.setSearchText(searchText);
-  }*/
 
 
 

@@ -11,7 +11,6 @@ export class NewsService{
   constructor(private http: HttpClient) {  }
 
   url = 'http://localhost:3000';
-  /*private search: string;*/
 
   getNeews(): Observable<Post> {
     return this.http.get<Post>(this.url + '/post').pipe(
@@ -19,20 +18,6 @@ export class NewsService{
       catchError(this.handleError)
     );
   }
-  /*getNeews(): Observable<any> {
-    return this.http.get<Post[]>(`${this.url}post/?postId=${}`);
-  }*/
-  /*getSearchText(): string{
-    return this.search;
-  }
-  // tslint:disable-next-line:typedef
-  setSearchText(searchText: string){
-    this.search = searchText;
-  }
-
-  getPostById(id: number): Observable<Post>{
-    return this.http.get<Post>(`${this.url}post/${id}`);
-  }*/
   getPost(id): Observable<Post> {
     return this.http.get<Post>(this.url + '/post/' + id)
       .pipe(
@@ -60,20 +45,7 @@ export class NewsService{
 
 
 
-  // tslint:disable-next-line:typedef
-  /*getNews(post: number): Observable<any> {
-    return this.http.get<Post[]>(`${this.url}post/?postId=${post}`);
-  }
-  getPostById(id: number): Observable<Post>{
-    return this.http.get<Post>(`${this.url}post/${id}`);
-  }*/
 
-/*  getNPost(): Observable<Post> {
-    return this.http.get<Post>(this.url + '/story')
-      .pipe(
-        retry(1),
-        catchError(this.handleError)
-      );
-  }*/
+
 
 
